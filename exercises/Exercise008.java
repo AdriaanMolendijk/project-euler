@@ -25,10 +25,10 @@ public class Exercise008 {
 
     public static void main(String[] args) {
         int l = number.length();
-        long prod, maxProd = 0;
+        long maxProd = 0;
         for (int i = 0; i < l - numLength; i++)
         {
-            prod = getProd(number.substring(i, i + numLength));
+            long prod = getProd(number.substring(i, i + numLength));
             maxProd = Math.max(maxProd, prod);
         }
         System.out.println(maxProd);

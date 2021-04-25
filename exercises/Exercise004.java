@@ -1,12 +1,12 @@
 public class Exercise004 {
 
     public static void main(String[] args) {
-        int c, maximum = 0;
+        int maximum = 0;
         for (int a = 100; a <= 999; a++)
         {
             for (int b = a; b <= 999; b++)
             {
-                c = a * b;
+                int c = a * b;
                 if (c > maximum && isPalindrome(Integer.toString(c)))
                 {
                     System.out.println(c);
