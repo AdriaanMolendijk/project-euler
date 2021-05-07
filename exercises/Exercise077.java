@@ -2,22 +2,22 @@ import java.util.ArrayList;
 
 public class Exercise077 {
 
-    private static boolean[] _sieve;
-    private static int _target;
-    private static int _count;
+    private static boolean[] sieve;
+    private static int target;
+    private static int count;
 
     public static void main(String[] args)
     {
         int limit = 100;
-        _sieve = primeSieve(limit);
+        sieve = primeSieve(limit);
 
         for (int n = 1; n <= limit; n++)
         {
-            _count = 0;
-            _target = n;
+            count = 0;
+            target = n;
             generate(new ArrayList<Integer>());
-            System.out.println(n + ": " + _count);
-            if (_count >= 5000) break;
+            System.out.println(n + ": " + count);
+            if (count >= 5000) break;
         }
     }
 
@@ -26,15 +26,15 @@ public class Exercise077 {
         int sum = 0;
         for (int s : seq) sum += s;
 
-        if (sum == _target)
+        if (sum == target)
         {
-            _count++;
+            count++;
             return;
         }
 
-        for (int i = 1; i <= _target - sum; i++)
+        for (int i = 1; i <= target - sum; i++)
         {
-            if (_sieve[i - 1])
+            if (sieve[i - 1])
             {
                 if (seq.size() >= 1)
                 {
