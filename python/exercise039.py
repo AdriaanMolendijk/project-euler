@@ -13,7 +13,7 @@ maxP = 0
 maxSol = 0
 for p in range(1,1_001):
     numSol = num_solutions(p)
-    if (numSol > maxSol):
+    if numSol > maxSol:
         maxSol = numSol
         maxP = p
 print(maxP)
