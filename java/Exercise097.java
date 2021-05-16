@@ -10,7 +10,6 @@ public class Exercise097 {
             mersenne = mersenne.mod(BigInteger.valueOf(10).pow(10));
         }
         mersenne = mersenne.add(BigInteger.ONE);
-        int numDigits = mersenne.toString().length();
         System.out.println(mersenne);
     }
 }
